@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arianne.wip</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<style type="text/css">
+		:root{
+			--sv: 0.8em;
+			--sh: 0.9em;
+			--sp1: 1em;
+			--sp2: 2em;
+		}
+
+
+		html{ 
+	--ts-1: 20px; 
+}
+@media all and (max-width: 44em) { 
+	html{ 
+		--ts-1: 17px;
+	} 
+}
+@media all and (max-width: 24em) { 
+	html{
+		--ts-1: 15px; 
+	} 
+}
+html{
+	font-size: var(--ts-1);
+	scroll-behavior: smooth;
+}
+
+
+
+		@font-face {
+		    font-family: 'ITCFranklinGothicStd-MdCd';
+		    src: url('assets/fonts/ITCFranklinGothicStd-MdCd.otf') format('otf');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+		body{
+			font-family: ITCFranklinGothicStd-MdCd;
+			line-height: 1.05;
+			word-spacing: 0.02em;
+			letter-spacing: 0.002em;
+		}
+
+
+
+
+		html{
+			scroll-behavior: smooth;
+		}
+		body{
+			font-size: 1em;
+			-webkit-font-smoothing:antialiased;
+			background: #fff;
+			-webkit-text-size-adjust: 100%;
+		}
+		header{
+			margin-bottom: var(--sv);
+			padding: var(--sv) var(--sh);
+			
+		}
+		.prj{
+			padding: var(--sv) var(--sh);
+/*			margin-bottom: var(--sv);*/
+		}
+
+		.prj:hover{
+/*			background: yellow;*/
+		}
+
+		.prj > h2{
+			position: sticky;
+			top: var(--sv);
+			display: flex;
+			flex-direction: row;
+			z-index: 998;
+/*			color:white;*/
+/*			mix-blend-mode: difference;*/
+			padding-bottom: var(--sv);
+		}
+		.flex-col{
+			display: flex;
+			gap:var(--sv);
+			flex-direction: column;
+			width:fit-content;
+			align-items: center;
+			margin: auto;
+		}
+		.flex-col > figure{
+			max-width: 450px;
+		}
+		figure{
+			width:100%;
+			background: gray;
+		}
+		img{
+			width:100%;
+			max-width: 100%;
+			display: block;
+		}
+		#lightbox{
+			display: none;
+			position: fixed;
+    		z-index: 999;
+    		top: 0;
+    		left: 0;
+    		right: 0;
+    		bottom: 0;
+    		background: #00000088;
+			backdrop-filter: invert(1);
+			padding: var(--sp2);
+		}
+		#lightbox span{
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		a{
+			color:inherit;
+			text-decoration-line: underline;
+    		text-underline-position: from-font;
+		}
+		main > nav{
+			padding: var(--sv) var(--sh);
+			margin-bottom: var(--sp1);
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		main > nav > a, .sqr-num{
+			font-size: 0.75em;
+			text-decoration: none;
+			width:1.25rem;
+			line-height: 1;
+			padding-top: 0.2rem;
+			padding-bottom: 0rem;
+			border: 1.5px solid #000;
+			display: flex;
+			justify-content: center;
+		}
+
+		main > nav > a:hover{
+			background: #000;
+			color:#fff;
+
+		}
+
+
+		.prj-num{
+			display: inline-block;
+			width: var(--sp2);
+			flex-shrink: 0;
+		}
+		#footer{
+			margin-top: 4em;
+			font-size:0.75em; 
+			text-align: center;
+			margin-bottom: var(--sv);
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Arianne Anyi Zhang is a graphic designer based in New York. She holds a BFA from Parsons School of Design and is dedicated to finding the median on the spectrum between art and design. She is currently at GOAT Group, tattooing on the side, and open to freelance work. This website is forever under construction. Read <a href="./resume.pdf" target="_blank">resume</a>. Visit <a href="https://www.instagram.com/yi_________an/" target="_blank">Instagram</a>. Contact <a href="mailto:arianneanyizhang@gmail.com" target="_blank">arianneanyizhang@gmail.com</a></h1>
+	</header>
+	<main>
+		<nav>
+			<a href="#white_space">1</a>
+			<a href="#atelier">2</a>
+			<a href="#fcf">3</a>
+			<a href="#flightclub">4</a>
+			<a href="#flightclub_window_display">5</a>
+			<a href="#sacred_noise">6</a>
+			<a href="#skyline_phantom">7</a>
+			<a href="#tnio">8</a>
+			<a href="#yiyi">9</a>
+			<a href="#studio_9090">10</a>
+		</nav>
+
+		<section class="prj" id="tnio">
+			<h2>
+				<span class="prj-num">8</span>
+				<p>Logo for DJ Tnio.</p>
+			</h2>
+			<div class="flex-col">
+				<figure><img src="assets/tnio/Tnio_1.webp"></figure>
+				<figure style="max-width:300px"><img src="assets/tnio/Tnio_2.webp"></figure>
+			</div>
+		</section>
+
+		<section class="prj" id="white_space">
+			<h2>
+				<span class="prj-num">1</span>
+				<p>White Space is a personal documentation of my experiences with lucid dreaming. The book is structured like a musical rhapsody, a unified piece with a free spirit featuring a spectrum of variation that is episodic yet integrated. Like a song, the value of this work is not in its ability to instruct readers, but in its ability to provide an emotional connection for others struggling with sleep disorders.</p>
+			</h2>
+			<div class="flex-col">
+				<figure style="max-width:100%;">
+					<div style="padding:66.67% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/948538947?h=7e8b1638c7&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				</figure>
+				<figure><img src="assets/white_space/White_Space_2.webp"></figure>
+				<figure><img src="assets/white_space/White_Space_3.webp"></figure>
+				<figure style="max-width: 600px;"><img src="assets/white_space/White_Space_4.webp"></figure>
+				<figure><img src="assets/white_space/White_Space_5.webp"></figure>
+				<figure><img src="assets/white_space/White_Space_6.webp"></figure>
+				<figure><img src="assets/white_space/White_Space_7.webp"></figure>
+				<figure><img src="assets/white_space/White_Space_8.webp"></figure>
+				<figure><img src="assets/white_space/White_Space_9.webp"></figure>
+				<figure><img src="assets/white_space/White_Space_10.webp"></figure>
+				<figure><img src="assets/white_space/White_Space_11.webp"></figure>
+				<figure><img src="assets/white_space/White_Space_12.webp"></figure>
+				<figure style="max-width: 600px;"><img src="assets/white_space/White_Space_13.webp"></figure>
+				<figure><img src="assets/white_space/White_Space_14.webp"></figure>
+				<figure><img src="assets/white_space/White_Space_15.webp"></figure>
+				<figure><img src="assets/white_space/White_Space_16.webp"></figure>
+				<figure><img src="assets/white_space/White_Space_17.webp"></figure>
+			</div>
+		</section>
+		
+		<section class="prj" id="atelier">
+			<h2>
+				<span class="prj-num">2</span>
+				<p>Poster and invitation for Atelier New York’s Paris Fashion Week After Party.</p>
+			</h2>
+			<div class="flex-col">
+				<figure><img src="assets/atelier/Atelier.webp"></figure>
+			</div>
+		</section>
+		<section class="prj" id="flightclub">
+			<h2>
+				<span class="prj-num">4</span>
+				<p>Sneaker ads for Flight Club with Eduard Johnston-Cielens.</p>
+			</h2>
+			<div class="flex-col">
+				<figure>
+					<div style="padding:100% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/948535729?h=8e14ea13d9&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				</figure>
+				<figure>
+					<div style="padding:100% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/948534899?h=247e8f2c75&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				</figure>
+				<figure>
+					<div style="padding:125% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/948537031?h=95568caae9&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				</figure>
+				<figure>
+					<div style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/948536605?h=82b0a4f9f2&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				</figure>
+				<figure>
+					<div style="padding:100% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/948536228?h=883afd19a8&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				</figure>
+				<figure style="max-width: 300px;"><img src="assets/flight_club/Flight_Club_6.webp"></figure>
+				<figure style="max-width: 300px;"><img src="assets/flight_club/Flight_Club_7.webp"></figure>
+				<figure style="max-width: 300px;"><img src="assets/flight_club/Flight_Club_8.webp"></figure>
+			</div>
+		</section>
+
+		<section class="prj" id="nicotine">
+			<h2>
+				<span class="prj-num">4</span>
+				<p>Graphic design for NicOtiNe Magazine issue 10.</p>
+			</h2>
+			<div class="flex-col">	
+				<figure>
+					<div style="padding:125% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/948537561?h=ee69a43cbc&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				</figure>
+				<figure>
+					<div style="padding:125% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/948538440?h=e491701b65&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				</figure>
+				<figure><img src="assets/nicotine/Nicotine_3.webp"></figure>	
+			</div>
+		</section>
+
+		<section class="prj" id="fcf">
+			<h2>
+				<span class="prj-num">3</span>
+				<p>Art Direction and wild postings with Sean Kuhnke for Flight Club Fridays, an in-store performance series featuring artists and rappers such as Saweetie, Flo Milli, Doja Cat, and more.</p>
+			</h2>
+			<div class="flex-col">
+				<figure style="max-width:300px;"><img src="assets/fcf/FCF_1.webp"></figure>	
+				<figure><img src="assets/fcf/FCF_2.webp"></figure>	
+				<figure style="max-width:300px;"><img src="assets/fcf/FCF_3.webp"></figure>	
+			</div>
+		</section>
+		
+
+		<section class="prj" id="sacred_noise">
+			<h2>
+				<span class="prj-num">6</span>
+				<p>Sacred Noise is a hanging fabric poster inspired by soundscape theories from Dr. Murray Schafer and Michael Bull on urban noise pollution. It is designed to be a graphic addition to a private space. (Silkscreen print, 70 x 90 cm.)</p>
+			</h2>
+			<div class="flex-col">
+				<figure><img src="assets/sacred_noise/Sacred_Noise_1.webp"></figure>
+				<figure style="max-width:300px;"><img src="assets/sacred_noise/Sacred_Noise_2.webp"></figure>
+			</div>
+		</section>
+
+		<section class="prj" id="yiyi">
+			<h2>
+				<span class="prj-num">9</span>
+				<p>Poster and flash templates for Yiyi Tattoo.</p>
+			</h2>
+			<div class="flex-col">
+				<figure style="max-width: 600px;"><img src="assets/yiyi/Yiyi_1.webp"></figure>
+				<figure><img src="assets/yiyi/Yiyi_2.webp"></figure>
+				<figure><img src="assets/yiyi/Yiyi_3.webp"></figure>
+				<figure><img src="assets/yiyi/Yiyi_4.webp"></figure>
+				<figure><img src="assets/yiyi/Yiyi_5.webp"></figure>
+			</div>
+		</section>
+
+		<section class="prj" id="skyline_phantom">
+			<h2>
+				<span class="prj-num">7</span>
+				<p>Skyline Phantom is a lookbook for menswear designer Jacob Jiang’s collection inspired by the Bosozoku, a motorcycle gang in Japan. The book highlights the Bosozoku’s emphasis on uniformity and Jiang’s minimal interpretation.</p>
+			</h2>
+			<div class="flex-col">
+				<figure><img src="assets/skyline_phantom/Skyline_Phantom_1.webp"></figure>
+				<figure style="max-width: 300px;"><img src="assets/skyline_phantom/Skyline_Phantom_2.webp"></figure>
+				<figure><img src="assets/skyline_phantom/Skyline_Phantom_3.webp"></figure>
+				<figure style="max-width: 300px;"><img src="assets/skyline_phantom/Skyline_Phantom_4.webp"></figure>
+			</div>
+		</section>
+		
+		<section class="prj" id="flightclub_window_display">
+			<h2>
+				<span class="prj-num">5</span>
+				<p>Window display design with Sean Kuhnke for Flight Club x Division Street’s collaboration release.</p>
+			</h2>
+			<div class="flex-col">
+				<figure><img src="assets/flight_club/Flight_Club_9.webp"></figure>
+			</div>
+		</section>
+		
+		
+		
+		
+		<section class="prj" id="studio_9090">
+			<h2>
+				<span class="prj-num">10</span>
+				<p>Tag cards for 9090 Studio, a multi-use space for young creatives to gather. </p>
+			</h2>
+			<div class="flex-col">
+				<figure><img src="assets/9090/9090_1.webp"></figure>
+			</div>
+		</section>
+	</main>
+	<p id="footer">Website designed and programmed by Arianne Zhang & Eddie Kim. Last updated 05.23.24</p>
+
+	<a id="lightbox">
+		<span></span>
+	</a>
+</body>
+<script type="text/javascript">
+
+	let colors = ['31aa9b', 'b8c4b8', 'e7ff00', '142682']
+	let figures = document.querySelectorAll('figure');
+	let lightbox = document.getElementById('lightbox');
+	let lightboxSpan = lightbox.querySelector('span');
+	let project = document.querySelectorAll('.prj');
+
+	project.forEach(prj=>{
+		prj.addEventListener('mouseenter', function(){
+			console.log()
+			this.style.background = '#'+colors[Math.floor(Math.random() * colors.length)];
+		})
+
+		prj.addEventListener('mouseleave', function(){
+			this.style.background = '';
+		})
+	})
+
+
+	figures.forEach(figure=>{
+		figure.addEventListener('click', function(){
+			console.log('clicked');
+			let img = figure.querySelector('img');
+			lightboxSpan.setAttribute('style', `background-image: url(${img.src})`)
+			lightbox.style.display="block";
+		})
+	})
+
+	lightbox.addEventListener('click', function(){
+		console.log('lightbox')
+		lightbox.style.display = 'none';
+	})
+
+
+
+</script>
+</html>
