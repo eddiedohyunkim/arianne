@@ -70,7 +70,8 @@ html{
 		}
 
 		.prj:hover{
-/*			background: yellow;*/
+			background: #000;
+			color:#fff;
 		}
 
 		.prj > h2{
@@ -135,7 +136,7 @@ html{
 			flex-direction: row;
 			justify-content: space-between;
 		}
-		main > nav > a{
+		/*main > nav > a{
 			font-size: 0.75em;
 			text-decoration: none;
 			width:1.25rem;
@@ -154,7 +155,7 @@ html{
 			background: #000;
 			color:#fff;
 
-		}
+		}*/
 
 
 		.prj-num{
@@ -363,22 +364,28 @@ html{
 </body>
 <script type="text/javascript">
 
-	let colors = ['31aa9b', 'b8c4b8', 'e7ff00', '142682']
+	// let colors = ['31aa9b', 'b8c4b8', 'e7ff00', '142682']
 	let figures = document.querySelectorAll('figure');
 	let lightbox = document.getElementById('lightbox');
 	let lightboxSpan = lightbox.querySelector('span');
 	let project = document.querySelectorAll('.prj');
 
-	project.forEach(prj=>{
-		prj.addEventListener('mouseenter', function(){
-			console.log()
-			this.style.background = '#'+colors[Math.floor(Math.random() * colors.length)];
-		})
+	// project.forEach(prj=>{
+	// 	prj.addEventListener('mouseenter', function(){
+	// 		console.log()
+	// 		// this.style.background = '#'+colors[Math.floor(Math.random() * colors.length)];
+	// 		this.style.background = '#000';
+	// 		this.style.color = '#fff';
+	// 		this.style.filter = 'unset';
 
-		prj.addEventListener('mouseleave', function(){
-			this.style.background = '';
-		})
-	})
+	// 		// background: #00000088;
+	// 		// backdrop-filter: invert(1);
+	// 	})
+
+	// 	prj.addEventListener('mouseleave', function(){
+	// 		this.removeAttribute('style');
+	// 	})
+	// })
 
 
 	figures.forEach(figure=>{
