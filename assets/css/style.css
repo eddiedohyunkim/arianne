@@ -108,6 +108,7 @@ figure .ifr-c{
 figure > img{
 	display: block;
 	height: 100%;
+	width: auto;
 	max-height: 100%;
 	cursor: zoom-in;
 }
