@@ -1,0 +1,151 @@
+:root{
+	--fs-1: 30px;
+	--fs-2: 16px;
+	--sv: 0.5rem;
+	--sh: 0.7em;
+	--sv2: 3em;
+	--sp1: 1em;
+	--sp2: 2em;
+
+	--img-h: 10em;
+}
+
+
+html{
+	font-size: var(--fs-1);
+	scroll-behavior: smooth;
+}
+body{
+	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.1;
+/*	letter-spacing: 0.02em;*/
+}
+
+
+
+
+html{
+	scroll-behavior: smooth;
+}
+body{
+	font-size: 1em;
+	-webkit-font-smoothing:antialiased;
+	-webkit-text-size-adjust: 100%;
+	margin: var(--sv) var(--sh);
+}
+main > * {
+	margin-bottom: var(--sv2);
+}
+
+
+/* NAV LINKS */
+nav > a{
+	display: block;
+}
+nav > a > span{
+	font-size: var(--fs-2);
+}
+
+
+/* PROJECTS */
+header > *, section > * {
+	margin-bottom: var(--sv);
+}
+section > h2{
+/*	margin-bottom: var(--sv2);*/
+}
+.project-images{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 2em;
+}
+.project-images > figure{
+	display: flex;
+	height: var(--img-h);
+	width: auto;
+	counter-increment: index;
+/*	flex-direction: column;*/
+/*    margin-bottom: 1.5em;*/
+}
+figure::before{
+	content: counter(index);
+	height: 100%;
+	width: fit-content;
+	display: inline-block;
+	align-content: center;
+	margin-right: 1em;
+}
+
+/*figure::after{
+	content: counter(index);
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: var(--sv);
+}*/
+
+.project-images > figure > img{
+	display: block;
+	height: 100%;
+	max-height: 100%;
+}
+
+.flex-col{
+	display: flex;
+	gap:var(--sv);
+	flex-direction: column;
+	width:fit-content;
+	align-items: center;
+	margin: auto;
+}
+img{
+	width:100%;
+	max-width: 100%;
+	display: block;
+}
+#lightbox{
+	display: none;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+#lightbox span{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+/* BASIC CSS &TYPOGRAPHY */
+a{
+	color:inherit;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+	text-underline-position: from-font;
+}
+em{
+	font-style: italic;
+}
+i{
+	font-size: var(--fs-2);
+}
+p{
+	font-size: var(--fs-2);
+	width: min(20rem, 100%);
+}
+#top-right{
+	padding: var(--sv) var(--sh);
+	position: absolute;
+	top: 0;
+	right: 0;	
+}

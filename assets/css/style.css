@@ -1,0 +1,188 @@
+:root{
+	--fs-1: 30px;
+	--fs-2: 0.53em;
+	--sv: 0.3rem;
+	--sh: 0.5em;
+	--sv2: 1.8em;
+	--highlight: rgb(180, 215, 255);
+	--img-h: 9em;
+}
+@media all and (max-width: 1150px) { 
+	:root{ --fs-1: 28px; } 
+}
+@media all and (max-width: 1050px) { 
+	:root{ --fs-1: 26px; } 
+}
+@media all and (max-width: 900px) { 
+	:root{ --fs-1: 24px; } 
+}
+@media all and (max-width: 400px) { 
+	:root{ --fs-1: 22px; } 
+}
+@media all and (max-width: 360px) { 
+	:root{ 
+		--fs-1: 20px; 
+		--img-h: 7em;
+	} 
+}
+
+
+html{
+	font-size: var(--fs-1);
+	scroll-behavior: smooth;
+}
+body{
+	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 1em;
+	line-height: 1.1;
+	-webkit-font-smoothing:antialiased;
+	-webkit-text-size-adjust: 100%;
+	margin: var(--sv) var(--sh);
+}
+main > * {
+	margin-bottom: var(--sv2);
+}
+
+/* NAV LINKS */
+nav > div, section > h2{
+	display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    width: fit-content;
+}
+nav > div > a, section > h2 > span{
+	margin-right: 0.3em;
+	text-indent: -1em;
+	padding-left: 1em;
+}
+@media all and (max-width: 600px) { 
+	nav > div > i{
+		display: none;
+	}
+}
+.accordion:hover{
+	text-decoration: underline;
+	text-underline-position: from-font;
+	cursor: pointer;
+}
+#about{
+	display: none;
+}
+#aboutCont:has(.accordion.show) #about{
+	display: block;
+} 
+
+
+/* PROJECTS */
+section.project{
+	padding-top: var(--sv);
+}
+section > * {
+	margin-bottom: var(--sv);
+}
+.project-images{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 2em;
+}
+figure{
+	display: flex;
+	height: var(--img-h);
+	width: auto;
+	counter-increment: index;
+}
+figure::before{
+	content: counter(index);
+	height: 100%;
+	width: fit-content;
+	display: inline-block;
+	align-content: center;
+	margin-right: 1em;
+}
+figure .ifr-c{
+	width: auto;
+    height: 100%;
+}
+figure > img{
+	display: block;
+	height: 100%;
+	max-height: 100%;
+	cursor: zoom-in;
+}
+figure:hover{
+	background: var(--highlight);
+}
+figure:hover::before{
+	background: unset;	
+}
+figure:hover > img{
+	mix-blend-mode: multiply;
+	filter: grayscale(1);
+}
+img{
+	width:100%;
+	max-width: 100%;
+	display: block;
+}
+
+
+#lightbox{
+	display: none;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	cursor: zoom-out;
+}
+#lightbox span{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+/* BASIC CSS &TYPOGRAPHY */
+a{
+	color:inherit;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+	text-underline-position: from-font;
+}
+a.ul{
+	text-decoration: underline;
+	text-underline-position: from-font;	
+}
+a.ul:hover{
+	text-decoration: none;	
+}
+em{
+	font-style: italic;
+}
+i{
+	font-size: var(--fs-2);
+}
+p{
+	font-size: var(--fs-2);
+	width: min(20rem, 100%);
+}
+#top-right{
+	padding: var(--sv) var(--sh);
+	position: absolute;
+	top: 0;
+	right: 0;	
+}
+@media all and (max-width: 700px) { 
+	#top-right{ font-size: var(--fs-2); } 
+}
+@media all and (max-width: 500px) { 
+	#top-right{ display: none; } 
+}
