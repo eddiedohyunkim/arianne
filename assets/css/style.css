@@ -4,8 +4,10 @@
 	--sv: 0.3rem;
 	--sh: 0.5em;
 	--sv2: 1.8em;
-	--highlight: rgb(180, 215, 255);
-	--img-h: 9em;
+	/*--highlight: rgb(180, 215, 255);*/
+	--highlight: conic-gradient(black, white, black, white, black);
+	/*--highlight: conic-gradient(white, black, white, black, white);*/
+	--img-h: 10em;
 }
 @media all and (max-width: 1150px) { 
 	:root{ --fs-1: 28px; } 
@@ -118,8 +120,8 @@ figure:hover{
 figure:hover::before{
 	background: unset;	
 }
-figure:hover > img{
-	mix-blend-mode: multiply;
+figure:hover > img, figure:hover iframe{
+	mix-blend-mode: screen;
 	filter: grayscale(1);
 }
 img{
@@ -138,6 +140,7 @@ img{
 	right: 0;
 	bottom: 0;
 	cursor: zoom-out;
+	background: #000000dd;
 }
 #lightbox span{
 	display: block;
